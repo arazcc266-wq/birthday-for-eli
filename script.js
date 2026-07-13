@@ -428,7 +428,19 @@ cinema.classList.add("active");
 
 const scene=document.querySelector(".door-scene");
 
-scene.classList.add("zoomScene");
+scene.classList.add("zoomScene");const garden=document.getElementById("gardenTransition");
+
+setTimeout(()=>{
+
+garden.classList.add("active");
+
+},900);
+
+setTimeout(()=>{
+
+garden.classList.remove("active");
+
+},3000);
 
 setTimeout(()=>{
 

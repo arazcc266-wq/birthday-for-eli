@@ -262,3 +262,139 @@ if (blowBtn) {
     });
 
 }
+/* ===================================
+   PART 9-3
+   FIREWORKS & CONFETTI
+=================================== */
+
+const fireworks = document.getElementById("fireworks");
+const confettiBox = document.getElementById("confetti");
+
+function launchFirework(x, y) {
+
+    for (let i = 0; i < 40; i++) {
+
+        const p = document.createElement("div");
+
+        p.className = "firework";
+
+        p.style.left = x + "px";
+        p.style.top = y + "px";
+
+        const angle = Math.random() * Math.PI * 2;
+        const distance = 80 + Math.random() * 140;
+
+        p.style.setProperty("--x", Math.cos(angle) * distance + "px");
+        p.style.setProperty("--y", Math.sin(angle) * distance + "px");
+
+        p.style.background =
+            `hsl(${Math.random()*360},100%,65%)`;
+
+        fireworks.appendChild(p);
+
+        setTimeout(() => p.remove(), 1500);
+
+    }
+
+}
+
+function createConfetti(){
+
+    const colors = [
+        "#ff4d8d",
+        "#ffd54f",
+        "#4dd0ff",
+        "#8cff66",
+        "#ffffff",
+        "#b388ff"
+    ];
+
+    const c = document.createElement("div");
+
+    c.className = "confetti";
+
+    c.style.left = Math.random()*100 + "vw";
+
+    c.style.background =
+        colors[Math.floor(Math.random()*colors.length)];
+
+    c.style.animationDuration =
+        (3 + Math.random()*2) + "s";
+
+    confettiBox.appendChild(c);
+
+    setTimeout(()=>{
+
+        c.remove();
+
+    },5000);
+
+}
+
+function heartBurst(){
+
+    const heart=document.createElement("div");
+
+    heart.className="heartBurst";
+
+    heart.innerHTML="❤️";
+
+    heart.style.left=(40+Math.random()*20)+"vw";
+
+    heart.style.top="60vh";
+
+    document.body.appendChild(heart);
+
+    setTimeout(()=>{
+
+        heart.remove();
+
+    },3000);
+
+}
+
+/* ===================================
+   Birthday Button Effects
+=================================== */
+
+if(blowBtn){
+
+    blowBtn.addEventListener("click",()=>{
+
+        // Fireworks
+        setTimeout(()=>launchFirework(
+            window.innerWidth*0.25,
+            window.innerHeight*0.30
+        ),300);
+
+        setTimeout(()=>launchFirework(
+            window.innerWidth*0.75,
+            window.innerHeight*0.25
+        ),800);
+
+        setTimeout(()=>launchFirework(
+            window.innerWidth*0.50,
+            window.innerHeight*0.18
+        ),1300);
+
+        // Confetti
+        const confettiInterval = setInterval(createConfetti,120);
+
+        setTimeout(()=>{
+
+            clearInterval(confettiInterval);
+
+        },6000);
+
+        // Hearts
+        const heartInterval = setInterval(heartBurst,250);
+
+        setTimeout(()=>{
+
+            clearInterval(heartInterval);
+
+        },5000);
+
+    });
+
+}

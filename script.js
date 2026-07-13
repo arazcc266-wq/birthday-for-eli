@@ -159,3 +159,60 @@ meteor.remove();
 }
 
 setInterval(createMeteor,1800);
+/* ===================================
+   LOVE BOOK
+=================================== */
+
+const pages = document.querySelectorAll(".page");
+
+const nextPage = document.getElementById("nextPage");
+
+const prevPage = document.getElementById("prevPage");
+
+let currentPage = 0;
+
+function showPage(index){
+
+pages.forEach(page=>page.classList.remove("active"));
+
+pages[index].classList.add("active");
+
+}
+
+if(nextPage){
+
+nextPage.onclick=()=>{
+
+currentPage++;
+
+if(currentPage>=pages.length){
+
+currentPage=0;
+
+}
+
+showPage(currentPage);
+
+};
+
+}
+
+if(prevPage){
+
+prevPage.onclick=()=>{
+
+currentPage--;
+
+if(currentPage<0){
+
+currentPage=pages.length-1;
+
+}
+
+showPage(currentPage);
+
+};
+
+}
+
+showPage(currentPage);

@@ -129,3 +129,33 @@ startButton.addEventListener("click",()=>{
     });
 
 });
+/* ===========================
+METEORS
+=========================== */
+
+function createMeteor(){
+
+const meteor=document.createElement("div");
+
+meteor.className="meteor";
+
+meteor.style.top=Math.random()*40+"%";
+
+meteor.style.left=(60+Math.random()*40)+"%";
+
+meteor.style.animationDuration=
+(1+Math.random()*1.5)+"s";
+
+document
+.getElementById("meteors")
+.appendChild(meteor);
+
+setTimeout(()=>{
+
+meteor.remove();
+
+},2500);
+
+}
+
+setInterval(createMeteor,1800);

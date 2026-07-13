@@ -1708,3 +1708,45 @@ opacity:0;
 }
 
 }
+/* ===========================
+   MAGIC PARTICLES
+=========================== */
+
+#magicParticles{
+    position:absolute;
+    inset:0;
+    pointer-events:none;
+    overflow:hidden;
+}
+
+.magicParticle{
+    position:absolute;
+    bottom:80px;
+    left:50%;
+    font-size:24px;
+    animation:magicRise 4s linear forwards;
+    filter:drop-shadow(0 0 10px rgba(255,255,255,.8));
+}
+
+@keyframes magicRise{
+
+0%{
+    transform:translate(-50%,0) scale(.4) rotate(0deg);
+    opacity:0;
+}
+
+15%{
+    opacity:1;
+}
+
+100%{
+    transform:
+        translate(
+            calc(-50% + var(--x)),
+            -650px
+        )
+        scale(1.4)
+        rotate(720deg);
+
+    opacity:0;
+}

@@ -216,3 +216,49 @@ showPage(currentPage);
 }
 
 showPage(currentPage);
+/* ===================================
+   PART 8-3
+   BIRTHDAY
+=================================== */
+
+const blowBtn = document.getElementById("blowCandles");
+
+if (blowBtn) {
+
+    blowBtn.addEventListener("click", () => {
+
+        document.querySelectorAll(".flame").forEach(flame => {
+
+            flame.style.opacity = "0";
+
+            flame.style.transform = "translateX(-50%) scale(0)";
+
+        });
+
+        const msg = document.createElement("div");
+
+        msg.className = "birthdayPopup";
+
+        msg.innerHTML = `
+        <h2>🎉 ڕۆژی لەدایکبوونت پیرۆز بێت Eli ❤️</h2>
+
+        <p>
+        هیوادارم تەمەنت پڕ بێت لە خۆشی،
+        ئارامی،
+        سەرکەوتن،
+        و هەموو خەونەکانت ببنە ڕاستی.
+        ❤️
+        </p>
+        `;
+
+        document.body.appendChild(msg);
+
+        setTimeout(() => {
+
+            msg.classList.add("show");
+
+        },100);
+
+    });
+
+}

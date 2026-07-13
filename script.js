@@ -422,6 +422,33 @@ glow.style.opacity="0";
    const light = document.getElementById("doorLight");
 
 light.classList.add("active");
+   const particleBox = document.getElementById("magicParticles");
+
+const icons = ["✨","🌸","💖","🦋","🌹","⭐"];
+
+for(let i=0;i<60;i++){
+
+    const p=document.createElement("div");
+
+    p.className="magicParticle";
+
+    p.innerHTML=icons[Math.floor(Math.random()*icons.length)];
+
+    p.style.left=(40+Math.random()*20)+"%";
+
+    p.style.setProperty("--x",(Math.random()*800-400)+"px");
+
+    p.style.animationDelay=(Math.random()*1.5)+"s";
+
+    particleBox.appendChild(p);
+
+    setTimeout(()=>{
+
+        p.remove();
+
+    },4000);
+
+}
 const flash=document.getElementById("magicFlash");
 
 flash.classList.add("show");

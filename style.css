@@ -2059,3 +2059,117 @@ transform:translateY(-20px);
 }
 
 }
+/* ===================================
+   PART 11
+   FINAL SECRET SCENE
+=================================== */
+
+#secret{
+
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    position:relative;
+    overflow:hidden;
+
+    text-align:center;
+
+    padding:40px;
+
+}
+
+
+.secret-box{
+
+    z-index:2;
+
+    max-width:800px;
+
+    padding:60px 40px;
+
+    background:rgba(255,255,255,.07);
+
+    backdrop-filter:blur(25px);
+
+    border-radius:40px;
+
+    border:1px solid rgba(255,255,255,.2);
+
+    box-shadow:
+    0 0 80px rgba(255,70,150,.5);
+
+    animation:fadeUp 2s ease;
+
+}
+
+
+.secret-box h2{
+
+    font-size:50px;
+
+    color:#ffd6e8;
+
+}
+
+
+.secret-box p{
+
+    margin-top:25px;
+
+    font-size:24px;
+
+    line-height:2;
+
+    color:white;
+
+}
+
+
+.secret-love{
+
+    font-size:100px;
+
+    margin:30px;
+
+    animation:beat 1s infinite;
+
+}
+
+
+/* floating hearts */
+
+.float-heart{
+
+    position:absolute;
+
+    bottom:-50px;
+
+    font-size:35px;
+
+    animation:rise 8s linear infinite;
+
+}
+
+
+@keyframes rise{
+
+0%{
+
+transform:translateY(0) scale(1);
+
+opacity:1;
+
+}
+
+100%{
+
+transform:translateY(-120vh) scale(1.5);
+
+opacity:0;
+
+}
+
+}

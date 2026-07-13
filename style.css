@@ -1541,3 +1541,83 @@ opacity:0;
     }
 
 }
+/* ===============================
+   MAGIC FLASH
+================================ */
+
+#magicFlash{
+
+position:fixed;
+left:0;
+top:0;
+width:100%;
+height:100%;
+background:white;
+opacity:0;
+pointer-events:none;
+z-index:9999;
+
+}
+
+#magicFlash.show{
+
+animation:magicFlash .8s ease;
+
+}
+
+@keyframes magicFlash{
+
+0%{
+opacity:0;
+}
+
+40%{
+opacity:1;
+}
+
+100%{
+opacity:0;
+}
+
+}
+
+/* ===============================
+   SPARKLES
+================================ */
+
+.spark{
+
+position:fixed;
+width:8px;
+height:8px;
+border-radius:50%;
+background:white;
+box-shadow:
+0 0 15px gold,
+0 0 30px white;
+pointer-events:none;
+z-index:9998;
+
+animation:sparkFly 2.2s linear forwards;
+
+}
+
+@keyframes sparkFly{
+
+0%{
+
+opacity:1;
+transform:scale(0);
+
+}
+
+100%{
+
+opacity:0;
+transform:
+translateY(-250px)
+scale(2);
+
+}
+
+}

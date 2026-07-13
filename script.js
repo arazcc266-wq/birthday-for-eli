@@ -419,6 +419,9 @@ right.style.transform="rotateY(120deg)";
 
 glow.style.transform="scale(3)";
 glow.style.opacity="0";
+   const light = document.getElementById("doorLight");
+
+light.classList.add("active");
 const flash=document.getElementById("magicFlash");
 
 flash.classList.add("show");

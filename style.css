@@ -647,3 +647,97 @@ background:#ff4d8d;
 border-radius:30px;
 
 }
+/* ===========================
+MOON
+=========================== */
+
+#moon{
+
+position:fixed;
+
+top:70px;
+
+right:80px;
+
+width:140px;
+
+height:140px;
+
+border-radius:50%;
+
+background:radial-gradient(circle at 30% 30%,
+#ffffff,
+#f8f8f8 35%,
+#d9d9d9 70%,
+#bdbdbd 100%);
+
+box-shadow:
+0 0 40px rgba(255,255,255,.8),
+0 0 80px rgba(255,255,255,.4),
+0 0 120px rgba(255,255,255,.2);
+
+z-index:-1;
+
+animation:moonFloat 8s ease-in-out infinite;
+
+}
+
+#moon::before{
+
+content:"";
+
+position:absolute;
+
+width:20px;
+
+height:20px;
+
+border-radius:50%;
+
+background:#cfcfcf;
+
+top:35px;
+
+left:30px;
+
+opacity:.4;
+
+}
+
+#moon::after{
+
+content:"";
+
+position:absolute;
+
+width:14px;
+
+height:14px;
+
+border-radius:50%;
+
+background:#cfcfcf;
+
+bottom:35px;
+
+right:35px;
+
+opacity:.3;
+
+}
+
+@keyframes moonFloat{
+
+0%,100%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-12px);
+
+}
+
+}

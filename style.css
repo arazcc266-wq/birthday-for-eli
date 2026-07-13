@@ -1750,3 +1750,83 @@ opacity:0;
 
     opacity:0;
 }
+/* =================================
+   CINEMATIC LIGHT RAYS
+================================= */
+
+#cinematicLight{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    opacity:0;
+    z-index:9997;
+
+    background:
+    radial-gradient(circle at center,
+    rgba(255,255,255,.9) 0%,
+    rgba(255,215,0,.45) 25%,
+    rgba(255,255,255,.08) 45%,
+    transparent 70%);
+
+    transition:1.8s;
+}
+
+#cinematicLight.active{
+
+    opacity:1;
+
+    animation:cinemaLight 2.5s ease forwards;
+
+}
+
+@keyframes cinemaLight{
+
+0%{
+
+transform:scale(.4);
+
+filter:blur(25px);
+
+}
+
+100%{
+
+transform:scale(2.8);
+
+filter:blur(3px);
+
+opacity:0;
+
+}
+
+}
+
+/* Camera Zoom */
+
+.zoomScene{
+
+animation:zoomScene 2s ease;
+
+}
+
+@keyframes zoomScene{
+
+0%{
+
+transform:scale(1);
+
+}
+
+50%{
+
+transform:scale(1.08);
+
+}
+
+100%{
+
+transform:scale(1);
+
+}
+
+}

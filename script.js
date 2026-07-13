@@ -419,7 +419,37 @@ right.style.transform="rotateY(120deg)";
 
 glow.style.transform="scale(3)";
 glow.style.opacity="0";
+const flash=document.getElementById("magicFlash");
 
+flash.classList.add("show");
+
+setTimeout(()=>{
+
+flash.classList.remove("show");
+
+},800);
+
+const container=document.getElementById("sparkleContainer");
+
+for(let i=0;i<120;i++){
+
+const s=document.createElement("div");
+
+s.className="spark";
+
+s.style.left=Math.random()*window.innerWidth+"px";
+
+s.style.top=Math.random()*window.innerHeight+"px";
+
+container.appendChild(s);
+
+setTimeout(()=>{
+
+s.remove();
+
+},2200);
+
+}
 document.body.style.overflow="hidden";
 
 setTimeout(()=>{

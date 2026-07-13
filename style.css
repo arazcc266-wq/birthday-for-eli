@@ -1902,3 +1902,160 @@ transform:scale(1);
     letter-spacing:3px;
 
 }
+/* ===================================
+   PART 10
+   CINEMATIC ENDING
+=================================== */
+
+#ending{
+
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    padding:40px;
+
+}
+
+
+.ending-box{
+
+    max-width:900px;
+
+    padding:60px 45px;
+
+    background:
+    linear-gradient(
+    135deg,
+    rgba(255,120,180,.15),
+    rgba(255,255,255,.05)
+    );
+
+    backdrop-filter:blur(30px);
+
+    border-radius:40px;
+
+    border:1px solid rgba(255,255,255,.2);
+
+    box-shadow:
+    0 0 80px rgba(255,100,170,.5);
+
+    animation:
+    fadeUp 2s ease,
+    heroGlow 5s infinite alternate;
+
+}
+
+
+.ending-box h1{
+
+    font-size:55px;
+
+    color:#ffe4f1;
+
+    margin-bottom:25px;
+
+}
+
+
+.ending-box p{
+
+    font-size:24px;
+
+    line-height:2;
+
+    color:white;
+
+}
+
+
+.big-love{
+
+    font-size:120px;
+
+    margin:35px 0;
+
+    animation:
+    heartFloat 3s infinite ease-in-out;
+
+}
+
+
+.love-button{
+
+    margin-top:35px;
+
+    padding:18px 45px;
+
+    border:none;
+
+    border-radius:50px;
+
+    font-size:22px;
+
+    color:white;
+
+    background:
+    linear-gradient(
+    45deg,
+    #ff4f9a,
+    #ff8cc6
+    );
+
+    cursor:pointer;
+
+    box-shadow:
+    0 0 30px rgba(255,80,150,.7);
+
+    transition:.4s;
+
+}
+
+
+.love-button:hover{
+
+    transform:scale(1.1);
+
+}
+
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+
+transform:translateY(80px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+
+@keyframes heartFloat{
+
+0%,100%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-20px);
+
+}
+
+}

@@ -422,6 +422,19 @@ glow.style.opacity="0";
    const light = document.getElementById("doorLight");
 
 light.classList.add("active");
+   const cinema=document.getElementById("cinematicLight");
+
+cinema.classList.add("active");
+
+const scene=document.querySelector(".door-scene");
+
+scene.classList.add("zoomScene");
+
+setTimeout(()=>{
+
+scene.classList.remove("zoomScene");
+
+},2000);
    const particleBox = document.getElementById("magicParticles");
 
 const icons = ["✨","🌸","💖","🦋","🌹","⭐"];

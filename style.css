@@ -1621,3 +1621,90 @@ scale(2);
 }
 
 }
+/* ============================
+   MAGIC LIGHT
+============================ */
+
+#doorLight{
+
+position:absolute;
+
+left:50%;
+
+top:50%;
+
+transform:translate(-50%,-50%);
+
+width:120px;
+
+height:320px;
+
+background:radial-gradient(circle,#fff8c7,#ffd700,#ff9900,transparent);
+
+filter:blur(40px);
+
+opacity:0;
+
+transition:1.5s;
+
+z-index:-1;
+
+}
+
+#doorLight.active{
+
+opacity:1;
+
+transform:translate(-50%,-50%) scale(2.5);
+
+}
+
+/* ============================
+   FOG
+============================ */
+
+.fog{
+
+position:absolute;
+
+bottom:-40px;
+
+width:180px;
+
+height:180px;
+
+background:rgba(255,255,255,.18);
+
+border-radius:50%;
+
+filter:blur(35px);
+
+animation:fogMove 8s linear infinite;
+
+}
+
+@keyframes fogMove{
+
+0%{
+
+transform:translateX(-50px);
+
+opacity:0;
+
+}
+
+50%{
+
+opacity:.8;
+
+}
+
+100%{
+
+transform:translateX(250px);
+
+opacity:0;
+
+}
+
+}

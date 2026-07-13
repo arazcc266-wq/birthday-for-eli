@@ -1241,3 +1241,133 @@ font-size:20px;
 line-height:2;
 
 }
+/* =========================================
+   PART 9-2
+   FIREWORKS & CONFETTI
+========================================= */
+
+#fireworks,
+#confetti{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:100%;
+
+pointer-events:none;
+
+overflow:hidden;
+
+z-index:9998;
+
+}
+
+.firework{
+
+position:absolute;
+
+width:8px;
+
+height:8px;
+
+border-radius:50%;
+
+background:#fff;
+
+animation:explode 1.3s ease-out forwards;
+
+box-shadow:
+0 0 12px #fff,
+0 0 25px #ff5da2,
+0 0 45px #ffd54f;
+
+}
+
+@keyframes explode{
+
+0%{
+
+transform:scale(.2);
+
+opacity:1;
+
+}
+
+100%{
+
+transform:translate(var(--x),var(--y)) scale(2.5);
+
+opacity:0;
+
+}
+
+}
+
+.confetti{
+
+position:absolute;
+
+width:10px;
+
+height:18px;
+
+border-radius:3px;
+
+animation:confettiFall 4s linear forwards;
+
+}
+
+@keyframes confettiFall{
+
+0%{
+
+transform:translateY(-50px) rotate(0deg);
+
+opacity:1;
+
+}
+
+100%{
+
+transform:translateY(110vh) rotate(900deg);
+
+opacity:0;
+
+}
+
+}
+
+.heartBurst{
+
+position:absolute;
+
+font-size:22px;
+
+animation:heartFly 3s ease-out forwards;
+
+}
+
+@keyframes heartFly{
+
+0%{
+
+transform:translateY(0) scale(.4);
+
+opacity:1;
+
+}
+
+100%{
+
+transform:translateY(-250px) scale(2);
+
+opacity:0;
+
+}
+
+}

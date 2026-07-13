@@ -541,7 +541,7 @@ const flowerIcons=[
 
 ];
 
-function createFlowerRain(){
+function createFlower(){
 
 const flower=document.createElement("div");
 
@@ -571,4 +571,4 @@ flower.remove();
 
 }
 
-setInterval(createFlowerRain,350);
+setInterval(createFlower,350);

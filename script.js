@@ -398,3 +398,43 @@ if(blowBtn){
     });
 
 }
+/* ===================================
+   MAGIC DOOR
+=================================== */
+
+const openDoorBtn = document.getElementById("openDoor");
+
+if(openDoorBtn){
+
+openDoorBtn.addEventListener("click",()=>{
+
+const left=document.querySelector(".door-left");
+const right=document.querySelector(".door-right");
+const glow=document.getElementById("doorGlow");
+const door=document.getElementById("magicDoor");
+const hero=document.getElementById("hero");
+
+left.style.transform="rotateY(-120deg)";
+right.style.transform="rotateY(120deg)";
+
+glow.style.transform="scale(3)";
+glow.style.opacity="0";
+
+document.body.style.overflow="hidden";
+
+setTimeout(()=>{
+
+door.style.opacity="0";
+door.style.pointerEvents="none";
+
+hero.scrollIntoView({
+behavior:"smooth"
+});
+
+document.body.style.overflow="auto";
+
+},1800);
+
+});
+
+}

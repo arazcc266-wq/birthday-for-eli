@@ -864,3 +864,121 @@ opacity:0;
 }
 
 }
+/* ===================================
+   PART 7-2
+   LOVE BOOK
+=================================== */
+
+.book{
+
+max-width:700px;
+
+margin:50px auto;
+
+perspective:1500px;
+
+}
+
+.page{
+
+display:none;
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(20px);
+
+padding:40px;
+
+border-radius:25px;
+
+border:1px solid rgba(255,255,255,.15);
+
+box-shadow:0 20px 60px rgba(0,0,0,.4);
+
+animation:pageOpen .8s ease;
+
+}
+
+.page.active{
+
+display:block;
+
+}
+
+.page h3{
+
+font-size:30px;
+
+margin-bottom:25px;
+
+color:#ffd6e7;
+
+}
+
+.page p{
+
+line-height:2.3;
+
+font-size:20px;
+
+}
+
+.book-buttons{
+
+margin-top:30px;
+
+display:flex;
+
+justify-content:center;
+
+gap:20px;
+
+}
+
+.book-buttons button{
+
+padding:15px 35px;
+
+border:none;
+
+border-radius:40px;
+
+background:#ff4d8d;
+
+color:white;
+
+font-size:18px;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.book-buttons button:hover{
+
+transform:scale(1.08);
+
+box-shadow:0 0 25px rgba(255,77,141,.6);
+
+}
+
+@keyframes pageOpen{
+
+from{
+
+opacity:0;
+
+transform:rotateY(-20deg) scale(.95);
+
+}
+
+to{
+
+opacity:1;
+
+transform:rotateY(0deg) scale(1);
+
+}
+
+}

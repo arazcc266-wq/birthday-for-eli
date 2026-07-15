@@ -173,9 +173,45 @@ let currentPage = 0;
 
 function showPage(index){
 
-pages.forEach(page=>page.classList.remove("active"));
+pages.forEach(page=>{
+
+page.classList.remove("active");
+
+});
 
 pages[index].classList.add("active");
+
+pages[index].animate(
+
+[
+
+{
+
+transform:"rotateY(-90deg)",
+
+opacity:0
+
+},
+
+{
+
+transform:"rotateY(0deg)",
+
+opacity:1
+
+}
+
+],
+
+{
+
+duration:900,
+
+easing:"ease-in-out"
+
+}
+
+);
 
 }
 

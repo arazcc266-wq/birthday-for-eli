@@ -639,3 +639,54 @@ timelineAnimation
 );
 
 timelineAnimation();
+
+/* ===================================
+   PART 14.1
+   OPEN MY HEART
+=================================== */
+
+function openLove(){
+
+    const secret = document.getElementById("secret");
+
+    // Smooth Scroll
+    secret.scrollIntoView({
+        behavior:"smooth"
+    });
+
+    // Fade Animation
+    secret.animate([
+        {
+            opacity:0,
+            transform:"translateY(80px)"
+        },
+        {
+            opacity:1,
+            transform:"translateY(0)"
+        }
+    ],{
+        duration:1200,
+        easing:"ease"
+    });
+
+    // Hearts Explosion
+    for(let i=0;i<35;i++){
+
+        const heart=document.createElement("div");
+
+        heart.innerHTML="❤️";
+
+        heart.className="heartBurst";
+
+        heart.style.left=Math.random()*100+"vw";
+        heart.style.top="85vh";
+
+        document.body.appendChild(heart);
+
+        setTimeout(()=>{
+            heart.remove();
+        },3000);
+
+    }
+
+}

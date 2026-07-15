@@ -770,3 +770,61 @@ playTyping();
 });
 
 }
+/* ===================================
+   PART 12.7
+   BOOK MAGIC
+=================================== */
+
+const pageSound = document.getElementById("pageSound");
+
+function bookMagic(){
+
+    if(pageSound){
+
+        pageSound.currentTime = 0;
+        pageSound.play().catch(()=>{});
+
+    }
+
+    const box = document.getElementById("bookEffects");
+
+    const icons=[
+        "✨",
+        "❤️",
+        "💖",
+        "🌸",
+        "🦋",
+        "⭐"
+    ];
+
+    for(let i=0;i<18;i++){
+
+        const s=document.createElement("div");
+
+        s.className="bookSpark";
+
+        s.innerHTML=
+        icons[
+            Math.floor(Math.random()*icons.length)
+        ];
+
+        s.style.left=(20+Math.random()*60)+"%";
+
+        s.style.bottom="20px";
+
+        s.style.setProperty(
+            "--x",
+            (Math.random()*220-110)+"px"
+        );
+
+        box.appendChild(s);
+
+        setTimeout(()=>{
+
+            s.remove();
+
+        },2000);
+
+    }
+
+}

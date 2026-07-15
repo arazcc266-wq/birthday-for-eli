@@ -2785,3 +2785,115 @@ transform:scale(1.08);
 box-shadow:0 0 45px rgba(255,80,150,.8);
 
 }
+/* ===================================
+   PART 12.6
+   REAL PAGE FLIP
+=================================== */
+
+.book{
+
+position:relative;
+
+perspective:3000px;
+
+}
+
+.page{
+
+transform-origin:left center;
+
+transform-style:preserve-3d;
+
+backface-visibility:hidden;
+
+transition:
+
+transform .9s ease,
+
+opacity .9s ease;
+
+}
+
+.page.active{
+
+animation:pageFlip3D .9s ease;
+
+}
+
+@keyframes pageFlip3D{
+
+0%{
+
+opacity:0;
+
+transform:
+rotateY(-110deg)
+translateX(-80px);
+
+}
+
+40%{
+
+opacity:.6;
+
+}
+
+100%{
+
+opacity:1;
+
+transform:
+rotateY(0deg)
+translateX(0);
+
+}
+
+}
+
+.page h3{
+
+animation:titleFade .8s;
+
+}
+
+.page p{
+
+animation:textFade 1s;
+
+}
+
+@keyframes titleFade{
+
+from{
+
+opacity:0;
+transform:translateY(-20px);
+
+}
+
+to{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+}
+
+@keyframes textFade{
+
+from{
+
+opacity:0;
+transform:translateY(25px);
+
+}
+
+to{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+}

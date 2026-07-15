@@ -2948,3 +2948,62 @@ rotate(360deg);
 }
 
 }
+/* ===================================
+   PART 12.8
+   OPEN BOOK
+=================================== */
+
+.book{
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.book-cover{
+
+position:absolute;
+
+inset:0;
+
+z-index:20;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+transition:1.2s;
+
+transform-origin:left;
+
+}
+
+.book-cover.open{
+
+transform:
+rotateY(-165deg);
+
+opacity:0;
+
+pointer-events:none;
+
+}
+
+.page{
+
+opacity:0;
+
+transition:1s;
+
+}
+
+.page.active{
+
+opacity:1;
+
+}

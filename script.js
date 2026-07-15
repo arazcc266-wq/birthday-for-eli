@@ -518,32 +518,44 @@ document.body.style.overflow="auto";
 
 function playTyping(){
 
-document.querySelectorAll(".typewriter")
+    document.querySelectorAll(".typewriter").forEach(text=>{
 
-.forEach(text=>{
+        const original=text.dataset.text || text.textContent;
 
-text.classList.remove("typing");
+        text.dataset.text=original;
 
-void text.offsetWidth;
+        text.textContent="";
 
-text.classList.add("typing");
+        let i=0;
 
-});
+        function type(){
+
+            if(i<original.length){
+
+                text.textContent+=original.charAt(i);
+
+                i++;
+
+                setTimeout(type,40); // خێرایی نووسین
+
+            }
+
+        }
+
+        type();
+
+    });
 
 }
 
 playTyping();
 
 if(nextPage){
-
-nextPage.addEventListener("click",playTyping);
-
+    nextPage.addEventListener("click",playTyping);
 }
 
 if(prevPage){
-
-prevPage.addEventListener("click",playTyping);
-
+    prevPage.addEventListener("click",playTyping);
 }
 /* ===================================
    PART 12.4

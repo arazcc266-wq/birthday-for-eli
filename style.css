@@ -2416,3 +2416,63 @@ opacity:0;
     }
 
 }
+/* ===================================
+   PART 12.3
+   TYPEWRITER
+=================================== */
+
+.typewriter{
+
+overflow:hidden;
+
+white-space:pre-line;
+
+border-right:3px solid #ff7eb3;
+
+animation:
+
+cursor .7s infinite;
+
+}
+
+.typing{
+
+animation:
+
+typing 5s steps(120,end),
+
+cursor .7s infinite;
+
+}
+
+@keyframes typing{
+
+from{
+
+max-width:0;
+
+}
+
+to{
+
+max-width:100%;
+
+}
+
+}
+
+@keyframes cursor{
+
+0%,100%{
+
+border-color:#ff7eb3;
+
+}
+
+50%{
+
+border-color:transparent;
+
+}
+
+}

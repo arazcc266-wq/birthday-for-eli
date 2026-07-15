@@ -2897,3 +2897,54 @@ transform:translateY(0);
 }
 
 }
+/* ===================================
+   PART 12.7
+   BOOK MAGIC
+=================================== */
+
+.bookSpark{
+
+position:absolute;
+
+font-size:24px;
+
+pointer-events:none;
+
+animation:bookSpark 2s linear forwards;
+
+filter:drop-shadow(0 0 10px white);
+
+}
+
+@keyframes bookSpark{
+
+0%{
+
+opacity:0;
+
+transform:
+translateY(0)
+scale(.3)
+rotate(0deg);
+
+}
+
+15%{
+
+opacity:1;
+
+}
+
+100%{
+
+opacity:0;
+
+transform:
+translateY(-180px)
+translateX(var(--x))
+scale(1.6)
+rotate(360deg);
+
+}
+
+}

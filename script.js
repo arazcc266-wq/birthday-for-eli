@@ -511,3 +511,37 @@ document.body.style.overflow="auto";
 });
 
 }
+/* ===================================
+   PART 12.3
+   TYPEWRITER
+=================================== */
+
+function playTyping(){
+
+document.querySelectorAll(".typewriter")
+
+.forEach(text=>{
+
+text.classList.remove("typing");
+
+void text.offsetWidth;
+
+text.classList.add("typing");
+
+});
+
+}
+
+playTyping();
+
+if(nextPage){
+
+nextPage.addEventListener("click",playTyping);
+
+}
+
+if(prevPage){
+
+prevPage.addEventListener("click",playTyping);
+
+}

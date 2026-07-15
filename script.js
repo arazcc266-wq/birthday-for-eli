@@ -759,10 +759,11 @@ function bookMagic(){
    OPEN BOOK
 =================================== */
 
-const openBook = document.getElementById("openBook");
+const openBook2 =
+document.getElementById("openBook");
 const bookCover = document.querySelector(".book-cover");
 
-if (openBook && bookCover) {
+if(openBook2){
 
     openBook.addEventListener("click", () => {
 

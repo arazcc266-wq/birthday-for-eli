@@ -181,11 +181,7 @@ page.classList.remove("active");
 
 pages[index].classList.add("active");
 
-pages[index].animate(
-
-[
-
-{
+}
 
 transform:"rotateY(-90deg)",
 

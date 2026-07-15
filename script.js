@@ -695,50 +695,7 @@ function openLove(){
     }
 
 }
-/* ===================================
-   PART 14.2
-   OPEN BOOK
-=================================== */
 
-const openBook=document.getElementById("openBook");
-
-if(openBook){
-
-openBook.addEventListener("click",()=>{
-
-const cover=document.querySelector(".book-cover");
-
-cover.animate([
-
-{
-transform:"rotateY(0deg)"
-},
-
-{
-transform:"rotateY(-180deg)"
-}
-
-],{
-
-duration:1500,
-fill:"forwards",
-easing:"ease-in-out"
-
-});
-
-setTimeout(()=>{
-
-cover.style.display="none";
-
-showPage(0);
-
-playTyping();
-
-},1500);
-
-});
-
-}
 /* ===================================
    PART 12.7
    BOOK MAGIC

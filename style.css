@@ -134,53 +134,87 @@ line-height:1.8;
 }
 
 /* ===========================
-HEART
+3D HEART LOGO
 =========================== */
 
-.heart-loader{
+.heartLogo{
+    position:relative;
+    width:140px;
+    height:140px;
+    margin:0 auto 25px;
+}
 
-width:90px;
+.heart3d{
+    position:absolute;
+    left:50%;
+    top:50%;
+    width:90px;
+    height:90px;
+    transform:translate(-50%,-50%) rotate(45deg);
+    background:linear-gradient(135deg,#ff2d75,#ff8fb8);
+    animation:heartBeat 1.4s infinite;
+    box-shadow:
+        0 0 25px rgba(255,60,120,.6),
+        inset -8px -8px 15px rgba(255,255,255,.25),
+        inset 8px 8px 15px rgba(0,0,0,.18);
+}
 
-height:90px;
+.heart3d::before,
+.heart3d::after{
+    content:"";
+    position:absolute;
+    width:90px;
+    height:90px;
+    border-radius:50%;
+    background:inherit;
+}
 
-background:#ff3b6f;
+.heart3d::before{
+    left:-45px;
+}
 
-margin:auto;
+.heart3d::after{
+    top:-45px;
+}
 
-transform:rotate(45deg);
+.heartGlow{
+    position:absolute;
+    left:50%;
+    top:50%;
+    width:170px;
+    height:170px;
+    transform:translate(-50%,-50%);
+    border-radius:50%;
+    background:radial-gradient(circle,
+    rgba(255,90,150,.55),
+    transparent 70%);
+    filter:blur(22px);
+    animation:glowPulse 2.2s infinite;
+}
 
-animation:beat 1.2s infinite;
+@keyframes heartBeat{
 
-position:relative;
+    0%,100%{
+        transform:translate(-50%,-50%) rotate(45deg) scale(1);
+    }
+
+    50%{
+        transform:translate(-50%,-50%) rotate(45deg) scale(1.15);
+    }
 
 }
 
-.heart-loader::before,
-.heart-loader::after{
+@keyframes glowPulse{
 
-content:"";
+    0%,100%{
+        opacity:.5;
+        transform:translate(-50%,-50%) scale(1);
+    }
 
-position:absolute;
-
-width:90px;
-
-height:90px;
-
-background:#ff3b6f;
-
-border-radius:50%;
-
-}
-
-.heart-loader::before{
-
-left:-45px;
-
-}
-
-.heart-loader::after{
-
-top:-45px;
+    50%{
+        opacity:1;
+        transform:translate(-50%,-50%) scale(1.3);
+    }
 
 }
 

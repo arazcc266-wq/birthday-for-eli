@@ -173,16 +173,11 @@ let currentPage = 0;
 
 function showPage(index){
 
-pages.forEach(page=>{
-
-page.classList.remove("active");
-
-});
+pages.forEach(page=>page.classList.remove("active"));
 
 pages[index].classList.add("active");
 
 }
-
 
 if(nextPage){
 
@@ -695,89 +690,47 @@ function openLove(){
     }
 
 }
-
 /* ===================================
-   PART 12.7
-   BOOK MAGIC
-=================================== */
-
-const pageSound = document.getElementById("pageSound");
-
-function bookMagic(){
-
-    if(pageSound){
-
-        pageSound.currentTime = 0;
-        pageSound.play().catch(()=>{});
-
-    }
-
-    const box = document.getElementById("bookEffects");
-
-    const icons=[
-        "✨",
-        "❤️",
-        "💖",
-        "🌸",
-        "🦋",
-        "⭐"
-    ];
-
-    for(let i=0;i<18;i++){
-
-        const s=document.createElement("div");
-
-        s.className="bookSpark";
-
-        s.innerHTML=
-        icons[
-            Math.floor(Math.random()*icons.length)
-        ];
-
-        s.style.left=(20+Math.random()*60)+"%";
-
-        s.style.bottom="20px";
-
-        s.style.setProperty(
-            "--x",
-            (Math.random()*220-110)+"px"
-        );
-
-        box.appendChild(s);
-
-        setTimeout(()=>{
-
-            s.remove();
-
-        },2000);
-
-    }
-
-}
-/* ===================================
-   PART 12.8
+   PART 14.2
    OPEN BOOK
 =================================== */
 
-const openBook2 =
-document.getElementById("openBook");
-const bookCover = document.querySelector(".book-cover");
+const openBook=document.getElementById("openBook");
 
-if(openBook2){
+if(openBook){
 
-    openBook.addEventListener("click", () => {
+openBook.addEventListener("click",()=>{
 
-        bookMagic();
+const cover=document.querySelector(".book-cover");
 
-        bookCover.style.display = "none";
+cover.animate([
 
-        showPage(0);
-       pages[index].classList.add("active");
-       bookMagic();
+{
+transform:"rotateY(0deg)"
+},
+
+{
+transform:"rotateY(-180deg)"
+}
+
+],{
+
+duration:1500,
+fill:"forwards",
+easing:"ease-in-out"
+
+});
+
+setTimeout(()=>{
+
+cover.style.display="none";
+
+showPage(0);
+
 playTyping();
 
-        playTyping();
+},1500);
 
-    });
+});
 
 }

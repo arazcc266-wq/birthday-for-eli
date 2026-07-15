@@ -183,33 +183,6 @@ pages[index].classList.add("active");
 
 }
 
-transform:"rotateY(-90deg)",
-
-opacity:0
-
-},
-
-{
-
-transform:"rotateY(0deg)",
-
-opacity:1
-
-}
-
-],
-
-{
-
-duration:900,
-
-easing:"ease-in-out"
-
-}
-
-);
-
-}
 
 if(nextPage){
 
@@ -822,31 +795,5 @@ function bookMagic(){
         },2000);
 
     }
-
-}
-/* ===================================
-   PART 12.8
-   OPEN BOOK
-=================================== */
-
-const openBook =
-document.getElementById("openBook");
-
-const bookCover =
-document.getElementById("bookCover");
-
-if(openBook){
-
-openBook.onclick=()=>{
-
-bookCover.classList.add("open");
-
-setTimeout(()=>{
-
-showPage(0);
-
-},700);
-
-};
 
 }

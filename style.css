@@ -2422,59 +2422,12 @@ opacity:0;
 =================================== */
 
 .typewriter{
-
-overflow:hidden;
-
-white-space:pre-line;
-
-border-right:3px solid #ff7eb3;
-
-animation:
-
-cursor .7s infinite;
-
-}
-
-.typing{
-
-animation:
-
-typing 5s steps(120,end),
-
-cursor .7s infinite;
-
-}
-
-@keyframes typing{
-
-from{
-
-max-width:0;
-
-}
-
-to{
-
-max-width:100%;
-
-}
-
+    white-space: pre-line;
 }
 
 @keyframes cursor{
-
-0%,100%{
-
-border-color:#ff7eb3;
-
-}
-
-50%{
-
-border-color:transparent;
-
-}
-
+    0%,100%{border-color:#ff7eb3;}
+    50%{border-color:transparent;}
 }
 /* ===================================
    PART 12.4

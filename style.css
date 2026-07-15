@@ -2704,3 +2704,46 @@ right:auto;
 }
 
 }
+.heart3d::after{
+
+overflow:hidden;
+
+}
+
+.heart3d::after{
+
+content:"";
+
+position:absolute;
+
+width:35px;
+
+height:180px;
+
+background:rgba(255,255,255,.35);
+
+transform:rotate(30deg);
+
+left:-80px;
+
+top:-60px;
+
+animation:shine 3.5s infinite;
+
+}
+
+@keyframes shine{
+
+0%{
+
+left:-120px;
+
+}
+
+100%{
+
+left:180px;
+
+}
+
+}

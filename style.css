@@ -2226,7 +2226,9 @@ opacity:0;
 }
 
 .book-cover{
-
+transform-origin:left center;
+backface-visibility:hidden;
+   
     position:relative;
 
     padding:70px 40px;

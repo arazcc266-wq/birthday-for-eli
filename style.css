@@ -1915,6 +1915,7 @@ transform:scale(1);
     justify-content:center;
     align-items:center;
 
+
     text-align:center;
 
     padding:40px;
@@ -2171,5 +2172,247 @@ transform:translateY(-120vh) scale(1.5);
 opacity:0;
 
 }
+
+}
+/* ===================================
+   PART 12.2
+   3D LOVE BOOK
+=================================== */
+
+.book{
+
+    position:relative;
+
+    max-width:720px;
+
+    margin:60px auto;
+
+    perspective:2200px;
+
+}
+
+.book-cover{
+
+    position:relative;
+
+    padding:70px 40px;
+
+    border-radius:30px;
+
+    background:linear-gradient(145deg,#ff4d8d,#ff87b5);
+
+    color:white;
+
+    text-align:center;
+
+    box-shadow:
+    0 30px 80px rgba(255,80,150,.45);
+
+    overflow:hidden;
+
+    animation:coverFloat 5s ease-in-out infinite;
+
+}
+
+.book-cover::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,.35),
+        transparent
+    );
+
+    transform:translateX(-120%);
+
+    animation:shine 4s infinite;
+
+}
+
+.book-cover h1{
+
+    font-size:90px;
+
+    margin-bottom:20px;
+
+}
+
+.book-cover h2{
+
+    font-size:38px;
+
+    margin-bottom:15px;
+
+}
+
+.book-cover p{
+
+    font-size:22px;
+
+    opacity:.95;
+
+}
+
+.book-cover span{
+
+    display:inline-block;
+
+    margin-top:35px;
+
+    padding:12px 30px;
+
+    border-radius:40px;
+
+    background:rgba(255,255,255,.18);
+
+    border:1px solid rgba(255,255,255,.3);
+
+}
+
+.page{
+
+    display:none;
+
+    margin-top:30px;
+
+    padding:45px;
+
+    border-radius:28px;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    box-shadow:
+    0 25px 60px rgba(0,0,0,.45);
+
+    transform-origin:left center;
+
+}
+
+.page.active{
+
+    display:block;
+
+    animation:pageFlip .9s ease;
+
+}
+
+.page h3{
+
+    color:#ffd8ea;
+
+    font-size:32px;
+
+    margin-bottom:25px;
+
+}
+
+.page p{
+
+    line-height:2.2;
+
+    font-size:22px;
+
+}
+
+.book-buttons{
+
+    margin-top:35px;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+}
+
+.book-buttons button{
+
+    width:65px;
+
+    height:65px;
+
+    border:none;
+
+    border-radius:50%;
+
+    font-size:28px;
+
+    color:white;
+
+    cursor:pointer;
+
+    background:linear-gradient(135deg,#ff4d8d,#ff8fc1);
+
+    transition:.35s;
+
+    box-shadow:
+    0 0 30px rgba(255,80,150,.45);
+
+}
+
+.book-buttons button:hover{
+
+    transform:scale(1.12);
+
+}
+
+@keyframes pageFlip{
+
+    0%{
+
+        opacity:0;
+
+        transform:
+        rotateY(-90deg)
+        translateX(-40px);
+
+    }
+
+    100%{
+
+        opacity:1;
+
+        transform:
+        rotateY(0)
+        translateX(0);
+
+    }
+
+}
+
+@keyframes coverFloat{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-12px);
+
+    }
+
+}
+
+@keyframes shine{
+
+    100%{
+
+        transform:translateX(140%);
+
+    }
 
 }

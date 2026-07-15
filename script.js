@@ -608,3 +608,34 @@ item.remove();
 }
 
 setInterval(createBookMagic,350);
+
+/* ===================================
+   PART 13
+   TIMELINE ANIMATION
+=================================== */
+
+const timelineItems =
+document.querySelectorAll(".timeline-item");
+
+function timelineAnimation(){
+
+timelineItems.forEach(item=>{
+
+const top=item.getBoundingClientRect().top;
+
+if(top<window.innerHeight-120){
+
+item.classList.add("show");
+
+}
+
+});
+
+}
+
+window.addEventListener(
+"scroll",
+timelineAnimation
+);
+
+timelineAnimation();

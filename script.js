@@ -754,3 +754,29 @@ function bookMagic(){
     }
 
 }
+/* ===================================
+   PART 12.8
+   OPEN BOOK
+=================================== */
+
+const openBook = document.getElementById("openBook");
+const bookCover = document.querySelector(".book-cover");
+
+if (openBook && bookCover) {
+
+    openBook.addEventListener("click", () => {
+
+        bookMagic();
+
+        bookCover.style.display = "none";
+
+        showPage(0);
+       pages[index].classList.add("active");
+       bookMagic();
+playTyping();
+
+        playTyping();
+
+    });
+
+}

@@ -545,3 +545,54 @@ if(prevPage){
 prevPage.addEventListener("click",playTyping);
 
 }
+/* ===================================
+   PART 12.4
+   BOOK MAGIC
+=================================== */
+
+const bookEffects=document.getElementById("bookEffects");
+
+const magicIcons=[
+"✨",
+"🌸",
+"💖",
+"🦋",
+"⭐",
+"💕",
+"🌹"
+];
+
+function createBookMagic(){
+
+if(!bookEffects) return;
+
+const item=document.createElement("div");
+
+item.className="bookMagic";
+
+item.innerHTML=
+magicIcons[
+Math.floor(
+Math.random()*magicIcons.length
+)
+];
+
+item.style.left=
+Math.random()*100+"%";
+
+item.style.bottom="20px";
+
+item.style.fontSize=
+(20+Math.random()*20)+"px";
+
+bookEffects.appendChild(item);
+
+setTimeout(()=>{
+
+item.remove();
+
+},5000);
+
+}
+
+setInterval(createBookMagic,350);

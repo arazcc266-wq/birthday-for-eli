@@ -3701,3 +3701,38 @@ transform:translateY(-12px);
 }
 
 }
+/* ===================================
+   PART 17.4
+   CINEMATIC WISH
+=================================== */
+
+body.wishMode{
+
+    transition:2s;
+
+    filter:
+    brightness(.85)
+    saturate(1.2);
+
+}
+
+#moon.wishMode{
+
+    transform:scale(1.25);
+
+    transition:2s;
+
+    box-shadow:
+    0 0 80px rgba(255,255,255,.95),
+    0 0 160px rgba(255,255,255,.6),
+    0 0 240px rgba(255,255,255,.35);
+
+}
+
+#aurora.wishMode{
+
+    opacity:1;
+
+    filter:blur(70px);
+
+}

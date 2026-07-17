@@ -734,3 +734,53 @@ playTyping();
 });
 
 }
+/* ===================================
+   PART 15
+   LOVE COUNTER
+=================================== */
+
+const daysEl = document.getElementById("days");
+const hoursEl = document.getElementById("hours");
+const minutesEl = document.getElementById("minutes");
+const secondsEl = document.getElementById("seconds");
+
+if(daysEl){
+
+    // ڕێکەوتی دەستپێکی خۆشەویستی
+    const loveDate = new Date("2025-11-27T00:00:00");
+
+    function updateLoveCounter(){
+
+        const now = new Date();
+
+        const diff = now - loveDate;
+
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+
+        const hours = Math.floor(
+            (diff % (1000 * 60 * 60 * 24)) /
+            (1000 * 60 * 60)
+        );
+
+        const minutes = Math.floor(
+            (diff % (1000 * 60 * 60)) /
+            (1000 * 60)
+        );
+
+        const seconds = Math.floor(
+            (diff % (1000 * 60)) /
+            1000
+        );
+
+        daysEl.textContent = days;
+        hoursEl.textContent = hours;
+        minutesEl.textContent = minutes;
+        secondsEl.textContent = seconds;
+
+    }
+
+    updateLoveCounter();
+
+    setInterval(updateLoveCounter,1000);
+
+}

@@ -784,3 +784,42 @@ if(daysEl){
     setInterval(updateLoveCounter,1000);
 
 }
+/* ===================================
+   PART 16
+   FIREFLIES
+=================================== */
+
+const fireflies = document.getElementById("fireflies");
+
+if(fireflies){
+
+    function createFirefly(){
+
+        const light = document.createElement("div");
+
+        light.className = "firefly";
+
+        light.style.left = Math.random()*100 + "vw";
+        light.style.bottom = "-20px";
+
+        light.style.setProperty(
+            "--move",
+            (Math.random()*200-100) + "px"
+        );
+
+        light.style.animationDuration =
+            (8 + Math.random()*5) + "s";
+
+        fireflies.appendChild(light);
+
+        setTimeout(()=>{
+
+            light.remove();
+
+        },13000);
+
+    }
+
+    setInterval(createFirefly,500);
+
+}

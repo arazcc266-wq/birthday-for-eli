@@ -1056,3 +1056,148 @@ promiseBtn.innerHTML = "❤️ Forever ❤️";
 });
 
 }
+/* ===================================
+   PART 17.3
+   WISHING STAR
+=================================== */
+
+const wishBtn = document.getElementById("wishButton");
+
+if(wishBtn){
+
+wishBtn.addEventListener("click",()=>{
+
+   
+document.body.classList.add("wishMode");
+
+const moon=document.getElementById("moon");
+
+const aurora=document.getElementById("aurora");
+
+if(moon){
+
+moon.classList.add("wishMode");
+
+}
+
+if(aurora){
+
+aurora.classList.add("wishMode");
+
+}
+
+
+const card=document.querySelector(".wish-card");
+
+card.classList.add("magic");
+
+const oldPopup=document.querySelector(".wishPopup");
+
+if(oldPopup){
+
+oldPopup.remove();
+
+}
+
+const popup=document.createElement("div");
+
+popup.className="birthdayPopup wishPopup";
+
+popup.innerHTML=`
+
+<h2>🌠 Your Wish 🌠</h2>
+
+<p>
+
+هەر ئارەزوویەکم لە دڵدا...
+تەنها یەک شتە...
+
+😊
+
+هەمیشە خەندە لەسەر لێوەکانی Eli ببینم ❤️
+
+</p>
+
+`;
+
+document.body.appendChild(popup);
+
+setTimeout(()=>{
+
+popup.classList.add("show");
+
+},100);
+
+setTimeout(()=>{
+
+popup.classList.remove("show");
+
+setTimeout(()=>{
+
+popup.remove();
+
+},600);
+
+},10000);
+
+const icons=[
+"⭐",
+"✨",
+"💖",
+"❤️",
+"🌸",
+"💫"
+];
+
+for(let i=0;i<70;i++){
+
+setTimeout(()=>{
+
+const item=document.createElement("div");
+
+item.className="promiseMagic";
+
+item.innerHTML=
+icons[
+Math.floor(Math.random()*icons.length)
+];
+
+item.style.left=
+(Math.random()*100)+"vw";
+
+item.style.bottom="-30px";
+
+item.style.setProperty(
+"--x",
+(Math.random()*400-200)+"px"
+);
+
+document.body.appendChild(item);
+
+setTimeout(()=>{
+
+item.remove();
+
+},4000);
+
+},i*35);
+
+}
+
+setTimeout(()=>{
+
+    document.body.classList.remove("wishMode");
+
+    if(moon){
+        moon.classList.remove("wishMode");
+    }
+
+    if(aurora){
+        aurora.classList.remove("wishMode");
+    }
+
+},10000);
+   
+});
+
+}

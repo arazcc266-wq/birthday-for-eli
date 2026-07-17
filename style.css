@@ -3491,3 +3491,213 @@ transform:scale(1);
 }
 
 }
+/* ===================================
+   PART 17.2
+   WISHING STAR
+=================================== */
+
+#wishSection{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:40px 20px;
+
+    text-align:center;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.wish-card{
+
+    position:relative;
+
+    max-width:850px;
+
+    width:100%;
+
+    padding:60px 45px;
+
+    border-radius:35px;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(25px);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    box-shadow:
+    0 0 60px rgba(255,255,255,.15);
+
+    animation:
+    heroGlow 5s infinite alternate,
+    wishFloat 5s ease-in-out infinite;
+
+}
+
+.wish-card h2{
+
+    font-size:52px;
+
+    color:#ffe8f5;
+
+    margin-bottom:25px;
+
+}
+
+.wish-card p{
+
+    font-size:23px;
+
+    line-height:2;
+
+    color:#f5f5f5;
+
+    margin-bottom:70px;
+
+}
+
+/* ===========================
+   SHOOTING STAR
+=========================== */
+
+#shootingStar{
+
+    position:absolute;
+
+    top:60px;
+
+    right:-180px;
+
+    width:180px;
+
+    height:3px;
+
+    border-radius:20px;
+
+    background:
+    linear-gradient(
+    to left,
+    white,
+    rgba(255,255,255,.2),
+    transparent
+    );
+
+    box-shadow:
+    0 0 20px white,
+    0 0 40px #8fd3ff;
+
+    transform:rotate(-25deg);
+
+    animation:
+    shootingStar 5s linear infinite;
+
+}
+
+@keyframes shootingStar{
+
+0%{
+
+right:-220px;
+
+top:60px;
+
+opacity:0;
+
+}
+
+10%{
+
+opacity:1;
+
+}
+
+70%{
+
+opacity:1;
+
+}
+
+100%{
+
+right:110%;
+
+top:280px;
+
+opacity:0;
+
+}
+
+}
+
+/* ===========================
+   BUTTON
+=========================== */
+
+#wishButton{
+
+    margin-top:30px;
+
+    padding:18px 48px;
+
+    border:none;
+
+    border-radius:50px;
+
+    cursor:pointer;
+
+    font-size:22px;
+
+    color:white;
+
+    background:
+    linear-gradient(
+    45deg,
+    #6f6dff,
+    #9b7dff,
+    #ff5db1
+    );
+
+    box-shadow:
+    0 0 35px rgba(120,120,255,.45);
+
+    transition:.35s;
+
+}
+
+#wishButton:hover{
+
+    transform:scale(1.08);
+
+    box-shadow:
+    0 0 55px rgba(160,160,255,.8);
+
+}
+
+/* ===========================
+   FLOAT
+=========================== */
+
+@keyframes wishFloat{
+
+0%,100%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-12px);
+
+}
+
+}

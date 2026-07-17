@@ -262,6 +262,18 @@ if (blowBtn) {
     });
 
 }
+// دوای 10 چرکە داخستنەوە
+setTimeout(() => {
+
+    msg.classList.remove("show");
+
+    setTimeout(() => {
+
+        msg.remove();
+
+    },600);
+
+},10000);
 /* ===================================
    PART 9-3
    FIREWORKS & CONFETTI
@@ -903,6 +915,19 @@ spark.remove();
             },100);
 
         },1000);
+
+       // دوای 10 چرکە داخستنەوە
+setTimeout(() => {
+
+    msg.classList.remove("show");
+
+    setTimeout(() => {
+
+        msg.remove();
+
+    },600);
+
+},10000);
 
         // Hearts
         for(let i=0;i<30;i++){

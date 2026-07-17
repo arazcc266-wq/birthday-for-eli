@@ -2785,3 +2785,76 @@ transform:scale(1.08);
 box-shadow:0 0 45px rgba(255,80,150,.8);
 
 }
+/* ===================================
+   PART 15
+   LOVE COUNTER
+=================================== */
+
+#loveCounter{
+    padding:120px 20px;
+    text-align:center;
+}
+
+.counter-text{
+    max-width:700px;
+    margin:25px auto 50px;
+    font-size:22px;
+    line-height:2;
+    color:#f3f3f3;
+}
+
+.counter-box{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:25px;
+}
+
+.counter-item{
+    width:160px;
+    padding:30px 20px;
+    border-radius:25px;
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(20px);
+    border:1px solid rgba(255,255,255,.15);
+    box-shadow:0 0 35px rgba(255,80,150,.25);
+    transition:.35s;
+}
+
+.counter-item:hover{
+    transform:translateY(-10px) scale(1.05);
+    box-shadow:0 0 50px rgba(255,80,150,.6);
+}
+
+.counter-item span{
+    display:block;
+    font-size:48px;
+    font-weight:700;
+    color:#ffd6e8;
+    text-shadow:0 0 20px rgba(255,120,180,.6);
+}
+
+.counter-item small{
+    display:block;
+    margin-top:12px;
+    font-size:18px;
+    color:#ffffffcc;
+}
+
+@media(max-width:768px){
+
+    .counter-box{
+        gap:15px;
+    }
+
+    .counter-item{
+        width:140px;
+        padding:25px 15px;
+    }
+
+    .counter-item span{
+        font-size:38px;
+    }
+
+}

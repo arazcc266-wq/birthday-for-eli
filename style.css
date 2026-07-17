@@ -3407,3 +3407,87 @@ text-shadow:
     opacity:.35;
 
 }
+/* ===================================
+   PART 16.4
+   PROMISE MAGIC
+=================================== */
+
+.promiseMagic{
+
+position:absolute;
+
+font-size:28px;
+
+pointer-events:none;
+
+animation:promiseMagic 4s linear forwards;
+
+filter:drop-shadow(0 0 12px rgba(255,255,255,.9));
+
+}
+
+@keyframes promiseMagic{
+
+0%{
+
+opacity:0;
+transform:
+translateY(40px)
+scale(.3)
+rotate(0deg);
+
+}
+
+15%{
+
+opacity:1;
+
+}
+
+100%{
+
+opacity:0;
+
+transform:
+translate(
+var(--x),
+-450px
+)
+scale(1.8)
+rotate(720deg);
+
+}
+
+}
+
+.promise-card.magic{
+
+animation:
+
+heroGlow 1.5s infinite alternate,
+
+promisePulse 1.5s ease;
+
+}
+
+@keyframes promisePulse{
+
+0%{
+
+transform:scale(1);
+
+}
+
+50%{
+
+transform:scale(1.04);
+
+}
+
+100%{
+
+transform:scale(1);
+
+}
+
+}

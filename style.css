@@ -2858,3 +2858,61 @@ box-shadow:0 0 45px rgba(255,80,150,.8);
     }
 
 }
+/* ===================================
+   PART 16
+   FIREFLIES
+=================================== */
+
+#fireflies{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    overflow:hidden;
+    z-index:-1;
+}
+
+.firefly{
+    position:absolute;
+    width:8px;
+    height:8px;
+    border-radius:50%;
+    background:#ffe96b;
+    box-shadow:
+        0 0 8px #fff799,
+        0 0 18px #ffe96b,
+        0 0 35px #ffd700;
+    animation:fireflyMove linear forwards,
+              fireflyGlow 1.5s ease-in-out infinite;
+}
+
+@keyframes fireflyMove{
+
+    from{
+        transform:translateY(0);
+        opacity:0;
+    }
+
+    15%{
+        opacity:1;
+    }
+
+    to{
+        transform:translateY(-120vh) translateX(var(--move));
+        opacity:0;
+    }
+
+}
+
+@keyframes fireflyGlow{
+
+    0%,100%{
+        opacity:.3;
+        transform:scale(.8);
+    }
+
+    50%{
+        opacity:1;
+        transform:scale(1.4);
+    }
+
+}

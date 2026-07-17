@@ -959,3 +959,100 @@ setTimeout(() => {
     });
 
 }
+/* ===================================
+   PART 16.3
+   TYPEWRITER PROMISE
+=================================== */
+
+const promiseBtn = document.getElementById("showPromise");
+const promiseText = document.getElementById("promiseText");
+
+if (promiseBtn && promiseText) {
+
+const fullText = `
+
+من بەڵێنت پێ دەدەم...
+
+هەمیشە پشتگیریت بکەم،
+
+هەمیشە ڕێزت لێ بگرم،
+
+هەمیشە لە کاتی خۆشی و ناخۆشیدا لە تەنیشت بم،
+
+هەمیشە بە دڵی پاک خۆشمبوێیت،
+
+و هەرگیز وازت لێ نەهێنم...
+
+❤️
+
+Araz ❤️ Eli
+`;
+
+promiseBtn.addEventListener("click", () => {
+
+promiseBtn.disabled = true;
+
+promiseText.innerHTML = "";
+
+let i = 0;
+
+const typing = setInterval(() => {
+
+promiseText.innerHTML += fullText.charAt(i);
+
+i++;
+
+if(i >= fullText.length){
+
+clearInterval(typing);
+
+const card=document.querySelector(".promise-card");
+
+card.classList.add("magic");
+
+const icons=["❤️","💖","💕","🌹","✨","🌸","⭐"];
+
+for(let j=0;j<60;j++){
+
+setTimeout(()=>{
+
+const item=document.createElement("div");
+
+item.className="promiseMagic";
+
+item.innerHTML=
+icons[
+Math.floor(Math.random()*icons.length)
+];
+
+item.style.left=
+(10+Math.random()*80)+"%";
+
+item.style.bottom="40px";
+
+item.style.setProperty(
+"--x",
+(Math.random()*300-150)+"px"
+);
+
+card.appendChild(item);
+
+setTimeout(()=>{
+
+item.remove();
+
+},4000);
+
+},j*40);
+
+}
+
+promiseBtn.innerHTML = "❤️ Forever ❤️";
+
+}
+
+},45);
+
+});
+
+}

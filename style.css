@@ -3246,3 +3246,160 @@ text-shadow:
 0 0 50px gold;
 
 }
+/* ===================================
+   PART 16.2
+   LOVE PROMISE
+=================================== */
+
+#promise{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:40px 20px;
+
+    text-align:center;
+
+}
+
+.promise-card{
+
+    width:100%;
+
+    max-width:850px;
+
+    padding:60px 45px;
+
+    border-radius:35px;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(25px);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    box-shadow:
+    0 0 60px rgba(255,80,150,.35);
+
+    animation:
+    heroGlow 4s infinite alternate,
+    promiseFloat 5s ease-in-out infinite;
+
+}
+
+.promise-card h2{
+
+    font-size:50px;
+
+    color:#ffd9ea;
+
+    margin-bottom:35px;
+
+}
+
+#promiseText{
+
+    font-size:24px;
+
+    line-height:2.2;
+
+    color:#f8f8f8;
+
+    white-space:pre-line;
+
+    min-height:240px;
+
+}
+
+#showPromise{
+
+    margin-top:35px;
+
+    padding:18px 45px;
+
+    border:none;
+
+    border-radius:50px;
+
+    cursor:pointer;
+
+    font-size:21px;
+
+    color:white;
+
+    background:linear-gradient(
+    45deg,
+    #ff4d8d,
+    #ff9dc6
+    );
+
+    box-shadow:
+    0 0 30px rgba(255,80,150,.45);
+
+    transition:.35s;
+
+}
+
+#showPromise:hover{
+
+    transform:scale(1.08);
+
+    box-shadow:
+    0 0 45px rgba(255,80,150,.8);
+
+}
+
+@keyframes promiseFloat{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-10px);
+
+    }
+
+}
+
+/* Decorative Hearts */
+
+.promise-card::before{
+
+    content:"❤️";
+
+    position:absolute;
+
+    top:20px;
+
+    left:25px;
+
+    font-size:35px;
+
+    opacity:.35;
+
+}
+
+.promise-card::after{
+
+    content:"💖";
+
+    position:absolute;
+
+    right:25px;
+
+    bottom:20px;
+
+    font-size:35px;
+
+    opacity:.35;
+
+}

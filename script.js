@@ -823,3 +823,86 @@ if(fireflies){
     setInterval(createFirefly,500);
 
 }
+/* ===================================
+   PART 15.3
+   MAGIC RING
+=================================== */
+
+const openRing = document.getElementById("openRing");
+const ringBox = document.getElementById("ringBox");
+
+if (openRing && ringBox) {
+
+    openRing.addEventListener("click", () => {
+
+        // Open Box
+        ringBox.classList.add("open");
+
+        // Disable Button
+        openRing.disabled = true;
+        openRing.innerHTML = "❤️ For Eli ❤️";
+
+        // Magic Message
+        setTimeout(() => {
+
+            const msg = document.createElement("div");
+
+            msg.className = "birthdayPopup";
+
+            msg.innerHTML = `
+                <h2>💍 Eli ❤️</h2>
+
+                <p>
+
+                ئەم ئەڵقەیە
+                تەنها ئەڵقە نییە...
+
+                هێمای ئەو خۆشەویستییەیە
+                کە هەموو ڕۆژێک
+                لە دڵم گەورەتر دەبێت.
+
+                ❤️
+
+                </p>
+            `;
+
+            document.body.appendChild(msg);
+
+            setTimeout(() => {
+
+                msg.classList.add("show");
+
+            },100);
+
+        },1000);
+
+        // Hearts
+        for(let i=0;i<30;i++){
+
+            setTimeout(()=>{
+
+                const heart=document.createElement("div");
+
+                heart.className="heartBurst";
+
+                heart.innerHTML=["❤️","💖","💕","💗"][Math.floor(Math.random()*4)];
+
+                heart.style.left=(45+Math.random()*10)+"%";
+
+                heart.style.top="55%";
+
+                document.body.appendChild(heart);
+
+                setTimeout(()=>{
+
+                    heart.remove();
+
+                },3000);
+
+            },i*80);
+
+        }
+
+    });
+
+}

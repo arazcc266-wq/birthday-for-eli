@@ -838,6 +838,34 @@ if (openRing && ringBox) {
         // Open Box
         ringBox.classList.add("open");
 
+       // Magic Sparkles
+
+for(let i=0;i<40;i++){
+
+setTimeout(()=>{
+
+const spark=document.createElement("div");
+
+spark.className="ringSpark";
+
+spark.innerHTML=["✨","⭐","💛","🌟"][Math.floor(Math.random()*4)];
+
+spark.style.setProperty("--x",(Math.random()*500-250)+"px");
+
+spark.style.setProperty("--y",(Math.random()*500-250)+"px");
+
+ringBox.appendChild(spark);
+
+setTimeout(()=>{
+
+spark.remove();
+
+},2500);
+
+},i*40);
+
+}
+
         // Disable Button
         openRing.disabled = true;
         openRing.innerHTML = "❤️ For Eli ❤️";

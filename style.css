@@ -2916,3 +2916,225 @@ box-shadow:0 0 45px rgba(255,80,150,.8);
     }
 
 }
+/* ===================================
+   PART 15.2
+   MAGIC RING
+=================================== */
+
+#ringSection{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:40px 20px;
+
+    text-align:center;
+
+}
+
+.ring-container{
+
+    max-width:800px;
+
+    width:100%;
+
+}
+
+#ringSection h2{
+
+    font-size:48px;
+
+    color:#ffd8ea;
+
+    margin:20px 0;
+
+}
+
+#ringSection .message{
+
+    max-width:650px;
+
+    margin:0 auto 50px;
+
+    line-height:2;
+
+    font-size:22px;
+
+}
+
+/* ===========================
+   BOX
+=========================== */
+
+#ringBox{
+
+    position:relative;
+
+    width:260px;
+
+    height:220px;
+
+    margin:60px auto;
+
+    perspective:1500px;
+
+}
+
+.box-base{
+
+    position:absolute;
+
+    bottom:0;
+
+    width:260px;
+
+    height:140px;
+
+    border-radius:0 0 25px 25px;
+
+    background:linear-gradient(145deg,#5a0d2f,#b71c5d,#ff4d8d);
+
+    box-shadow:
+    0 25px 60px rgba(0,0,0,.45);
+
+}
+
+.box-lid{
+
+    position:absolute;
+
+    top:0;
+
+    width:260px;
+
+    height:90px;
+
+    border-radius:20px;
+
+    background:linear-gradient(145deg,#ff76b4,#ff4d8d);
+
+    transform-origin:bottom;
+
+    transition:1.3s;
+
+    box-shadow:
+    0 15px 35px rgba(255,80,150,.5);
+
+}
+
+/* ===========================
+   RING
+=========================== */
+
+#ring{
+
+    position:absolute;
+
+    left:50%;
+
+    bottom:30px;
+
+    transform:translateX(-50%) scale(.2);
+
+    font-size:70px;
+
+    opacity:0;
+
+    transition:1.2s;
+
+    filter:drop-shadow(0 0 20px gold);
+
+}
+
+/* ===========================
+   BUTTON
+=========================== */
+
+#openRing{
+
+    margin-top:30px;
+
+    padding:18px 45px;
+
+    border:none;
+
+    border-radius:50px;
+
+    cursor:pointer;
+
+    color:white;
+
+    font-size:20px;
+
+    background:linear-gradient(
+    45deg,
+    #ff4d8d,
+    #ff9dc6
+    );
+
+    box-shadow:
+    0 0 30px rgba(255,80,150,.45);
+
+    transition:.35s;
+
+}
+
+#openRing:hover{
+
+    transform:scale(1.08);
+
+    box-shadow:
+    0 0 45px rgba(255,80,150,.75);
+
+}
+
+/* ===========================
+   OPEN
+=========================== */
+
+#ringBox.open .box-lid{
+
+    transform:
+    rotateX(-130deg);
+
+}
+
+#ringBox.open #ring{
+
+    opacity:1;
+
+    transform:
+    translateX(-50%)
+    translateY(-110px)
+    scale(1.2);
+
+    animation:ringFloat 2.5s infinite ease-in-out;
+
+}
+
+@keyframes ringFloat{
+
+0%,100%{
+
+transform:
+translateX(-50%)
+translateY(-110px)
+scale(1.2);
+
+}
+
+50%{
+
+transform:
+translateX(-50%)
+translateY(-130px)
+scale(1.3);
+
+}
+
+}

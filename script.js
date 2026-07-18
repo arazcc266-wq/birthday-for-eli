@@ -1212,6 +1212,11 @@ if(finishBtn){
 
 finishBtn.addEventListener("click",()=>{
 
+document.body.classList.add("theEnd");
+
+document.querySelector(".finalCard")
+.classList.add("finalGlow");
+
 const popup=document.createElement("div");
 
 popup.className="birthdayPopup";

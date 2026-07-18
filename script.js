@@ -1201,3 +1201,60 @@ setTimeout(()=>{
 });
 
 }
+/* ===================================
+   PART 19
+   FINAL STORY
+=================================== */
+
+const finishBtn=document.getElementById("finishBtn");
+
+if(finishBtn){
+
+finishBtn.addEventListener("click",()=>{
+
+const popup=document.createElement("div");
+
+popup.className="birthdayPopup";
+
+popup.innerHTML=`
+
+<h2>❤️ Forever ❤️</h2>
+
+<p>
+
+ئەم چیرۆکە لێرە کۆتایی نایەت...
+
+ئەوەی گرنگە
+
+خۆشەویستی هەمیشە دەست پێدەکات.
+
+❤️
+
+Araz ❤️ Eli
+
+</p>
+
+`;
+
+document.body.appendChild(popup);
+
+setTimeout(()=>{
+
+popup.classList.add("show");
+
+},100);
+
+setTimeout(()=>{
+
+popup.classList.remove("show");
+
+setTimeout(()=>{
+
+popup.remove();
+
+},600);
+
+},10000);
+
+});
+}

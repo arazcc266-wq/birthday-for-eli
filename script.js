@@ -1313,5 +1313,17 @@ popup.remove();
 
 },10000);
 
+setTimeout(()=>{
+
+const forever=document.getElementById("foreverScreen");
+
+if(forever){
+
+forever.classList.add("show");
+
+}
+
+},10000);
+
 });
 }

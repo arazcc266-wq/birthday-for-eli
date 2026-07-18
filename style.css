@@ -3862,3 +3862,57 @@ filter:drop-shadow(0 0 10px hotpink);
 }
 
 }
+/* ===================================
+   PART 19.2
+   FINAL CELEBRATION
+=================================== */
+
+.finalCelebration{
+
+position:fixed;
+
+top:-60px;
+
+font-size:32px;
+
+pointer-events:none;
+
+z-index:999999;
+
+animation:celebrationFall 6s linear forwards;
+
+filter:drop-shadow(0 0 12px white);
+
+}
+
+@keyframes celebrationFall{
+
+0%{
+
+opacity:0;
+
+transform:
+translateY(-50px)
+rotate(0deg)
+scale(.5);
+
+}
+
+10%{
+
+opacity:1;
+
+}
+
+100%{
+
+opacity:0;
+
+transform:
+translateY(120vh)
+rotate(720deg)
+scale(1.4);
+
+}
+
+}

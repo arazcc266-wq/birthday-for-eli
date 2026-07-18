@@ -4000,3 +4000,68 @@ transform:scale(1.2);
 color:#ff6aa9;
 
 }
+/* ===================================
+   PART 18.4
+   PHOTO MESSAGE
+=================================== */
+
+#popupCaption{
+
+margin-top:30px;
+
+max-width:700px;
+
+padding:0 25px;
+
+font-size:22px;
+
+line-height:2;
+
+text-align:center;
+
+color:white;
+
+animation:fadeUp .8s ease;
+
+text-shadow:0 0 15px rgba(255,255,255,.35);
+
+}
+
+.popupHeart{
+
+position:fixed;
+
+font-size:28px;
+
+pointer-events:none;
+
+animation:popupHeartFly 3s linear forwards;
+
+z-index:100000;
+
+}
+
+@keyframes popupHeartFly{
+
+0%{
+
+opacity:1;
+
+transform:
+translateY(0)
+scale(.5);
+
+}
+
+100%{
+
+opacity:0;
+
+transform:
+translateY(-250px)
+scale(2)
+rotate(360deg);
+
+}
+
+}

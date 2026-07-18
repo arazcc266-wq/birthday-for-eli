@@ -1201,3 +1201,47 @@ setTimeout(()=>{
 });
 
 }
+/* ===================================
+   PART 18.3
+   GALLERY POPUP
+=================================== */
+
+const photos=document.querySelectorAll(".photo");
+
+const galleryPopup=document.getElementById("galleryPopup");
+
+const popupImage=document.getElementById("popupImage");
+
+const closeGallery=document.getElementById("closeGallery");
+
+photos.forEach(photo=>{
+
+photo.addEventListener("click",()=>{
+
+const img=photo.querySelector("img");
+
+if(!img) return;
+
+popupImage.src=img.src;
+
+galleryPopup.classList.add("show");
+
+});
+
+});
+
+closeGallery.addEventListener("click",()=>{
+
+galleryPopup.classList.remove("show");
+
+});
+
+galleryPopup.addEventListener("click",(e)=>{
+
+if(e.target===galleryPopup){
+
+galleryPopup.classList.remove("show");
+
+}
+
+});

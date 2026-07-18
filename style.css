@@ -3972,3 +3972,87 @@ border-color:transparent;
 }
 
 }
+/* ===================================
+   PART 19.4
+   FOREVER SCREEN
+=================================== */
+
+#foreverScreen{
+
+position:fixed;
+
+inset:0;
+
+background:black;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+opacity:0;
+
+visibility:hidden;
+
+transition:2s;
+
+z-index:9999999;
+
+}
+
+#foreverScreen.show{
+
+opacity:1;
+
+visibility:visible;
+
+}
+
+#foreverScreen h1{
+
+font-size:60px;
+
+color:white;
+
+margin-bottom:20px;
+
+text-shadow:0 0 25px hotpink;
+
+animation:foreverGlow 2s infinite;
+
+}
+
+#foreverScreen p{
+
+font-size:28px;
+
+color:#ffd6e8;
+
+letter-spacing:5px;
+
+}
+
+@keyframes foreverGlow{
+
+0%{
+
+text-shadow:0 0 10px hotpink;
+
+}
+
+50%{
+
+text-shadow:0 0 35px deeppink;
+
+}
+
+100%{
+
+text-shadow:0 0 10px hotpink;
+
+}
+
+}

@@ -3916,3 +3916,59 @@ scale(1.4);
 }
 
 }
+/* ===================================
+   PART 19.3
+   FINAL TYPEWRITER
+=================================== */
+
+.finalTyping{
+
+display:inline-block;
+
+overflow:hidden;
+
+white-space:nowrap;
+
+border-right:3px solid #ff7eb3;
+
+width:0;
+
+animation:
+
+finalTyping 5s steps(70,end) forwards,
+
+cursorBlink .8s infinite;
+
+}
+
+@keyframes finalTyping{
+
+from{
+
+width:0;
+
+}
+
+to{
+
+width:100%;
+
+}
+
+}
+
+@keyframes cursorBlink{
+
+0%,100%{
+
+border-color:#ff7eb3;
+
+}
+
+50%{
+
+border-color:transparent;
+
+}
+
+}

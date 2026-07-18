@@ -4056,3 +4056,63 @@ text-shadow:0 0 10px hotpink;
 }
 
 }
+/* ===================================
+PART 20.1
+THANK YOU
+=================================== */
+
+#thanksSection{
+
+padding:160px 20px;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+}
+
+.thanksBox{
+
+max-width:700px;
+
+padding:60px;
+
+border-radius:30px;
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(20px);
+
+box-shadow:0 0 40px rgba(255,105,180,.3);
+
+}
+
+.thanksBox h1{
+
+font-size:48px;
+
+margin-bottom:25px;
+
+}
+
+.thanksBox p{
+
+font-size:22px;
+
+line-height:2;
+
+margin-bottom:25px;
+
+}
+
+.thanksBox h2{
+
+color:#ff9acb;
+
+letter-spacing:4px;
+
+}

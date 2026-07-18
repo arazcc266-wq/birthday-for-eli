@@ -1291,6 +1291,14 @@ setTimeout(()=>{
 
 popup.classList.add("show");
 
+const text=popup.querySelector("p");
+
+if(text){
+
+text.classList.add("finalTyping");
+
+}
+
 },100);
 
 setTimeout(()=>{

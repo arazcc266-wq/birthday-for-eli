@@ -1217,6 +1217,50 @@ document.body.classList.add("theEnd");
 document.querySelector(".finalCard")
 .classList.add("finalGlow");
 
+const finalIcons=[
+
+"❤️",
+"💖",
+"💕",
+"🌹",
+"🌸",
+"✨",
+"⭐"
+
+];
+
+for(let i=0;i<120;i++){
+
+setTimeout(()=>{
+
+const item=document.createElement("div");
+
+item.className="finalCelebration";
+
+item.innerHTML=
+
+finalIcons[
+Math.floor(Math.random()*finalIcons.length)
+];
+
+item.style.left=
+(Math.random()*100)+"vw";
+
+item.style.animationDuration=
+(4+Math.random()*3)+"s";
+
+document.body.appendChild(item);
+
+setTimeout(()=>{
+
+item.remove();
+
+},7000);
+
+},i*45);
+
+}
+
 const popup=document.createElement("div");
 
 popup.className="birthdayPopup";

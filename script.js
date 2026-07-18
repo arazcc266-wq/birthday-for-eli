@@ -1225,6 +1225,31 @@ if(!img) return;
 popupImage.src=img.src;
 
 galleryPopup.classList.add("show");
+   for(let i=0;i<25;i++){
+
+setTimeout(()=>{
+
+const heart=document.createElement("div");
+
+heart.className="popupHeart";
+
+heart.innerHTML=Math.random()>0.5?"❤️":"💖";
+
+heart.style.left=(20+Math.random()*60)+"vw";
+
+heart.style.top=(40+Math.random()*30)+"vh";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+
+heart.remove();
+
+},3000);
+
+},i*80);
+
+}
 
 });
 

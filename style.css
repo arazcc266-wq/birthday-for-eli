@@ -3702,3 +3702,81 @@ body.wishMode{
     filter:blur(70px);
 
 }
+/* ===================================
+PART 19
+FINAL MESSAGE
+=================================== */
+
+#finalSection{
+
+padding:120px 20px;
+display:flex;
+justify-content:center;
+align-items:center;
+
+}
+
+.finalCard{
+
+max-width:700px;
+width:100%;
+
+padding:50px;
+
+border-radius:30px;
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(18px);
+
+text-align:center;
+
+box-shadow:0 0 60px rgba(255,105,180,.3);
+
+}
+
+.finalCard h1{
+
+font-size:45px;
+margin:20px 0;
+
+}
+
+.finalCard p{
+
+font-size:22px;
+line-height:2;
+
+white-space:pre-line;
+
+margin:30px 0;
+
+}
+
+#finishBtn{
+
+padding:18px 40px;
+
+font-size:20px;
+
+border:none;
+
+border-radius:50px;
+
+background:#ff4f9f;
+
+color:white;
+
+cursor:pointer;
+
+transition:.4s;
+
+}
+
+#finishBtn:hover{
+
+transform:scale(1.08);
+
+box-shadow:0 0 30px hotpink;
+
+}
